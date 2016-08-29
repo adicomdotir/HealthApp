@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">HealthApplication</string>
+    <string-array name="array_activity">
+        <item>ورزش نمی‌کنم یا خیلی کم</item>
+        <item>ورزش سبک یا نرمش ۱ الی ۳ روز در هفته</item>
+        <item>        ورزش یا تمرینات معتدل ۳ الی ۵ روز در هفته</item>
+        <item>        ورزش یا تمرینات سنگین ۶ الی ۷ روز در هفته</item>
+        <item>        ورزش یا تمرینات خیلی سخت و یک شغل فیزیکی یا تمرینات سوپر</item>
+    </string-array>
 </resources>
