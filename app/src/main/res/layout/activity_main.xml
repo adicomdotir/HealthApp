@@ -478,10 +478,250 @@
                 </LinearLayout>
 
                 <LinearLayout
+                    android:background="#FFF"
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"></LinearLayout>
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7">
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="سن"
+                                    android:id="@+id/textView31"
+                                    android:layout_weight="0.5"
+                                    android:paddingLeft="20dp"
+                                    android:gravity="left"
+                                    android:textColor="#000" />
+
+                                <EditText
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:ems="10"
+                                    android:id="@+id/editText31"
+                                    android:text="30"
+                                    android:layout_weight="0.5"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="وزن"
+                                    android:id="@+id/textView21"
+                                    android:layout_weight="0.5"
+                                    android:paddingLeft="20dp"
+                                    android:gravity="left"
+                                    android:textColor="#000" />
+
+                                <EditText
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:ems="10"
+                                    android:id="@+id/editText21"
+                                    android:layout_weight="0.5"
+                                    android:text="80"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="قد"
+                                    android:id="@+id/textView1"
+                                    android:layout_weight="0.5"
+                                    android:paddingLeft="20dp"
+                                    android:gravity="left"
+                                    android:textColor="#000" />
+
+                                <EditText
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:ems="10"
+                                    android:id="@+id/editText11"
+                                    android:layout_weight="0.5"
+                                    android:text="180"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="زمان"
+                                    android:id="@+id/textView17"
+                                    android:layout_weight="0.5"
+                                    android:paddingLeft="20dp"
+                                    android:gravity="left"
+                                    android:textColor="#000" />
+
+                                <EditText
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:ems="10"
+                                    android:id="@+id/editText4"
+                                    android:layout_weight="0.5"
+                                    android:text="10"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:gravity="center">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="جنسیت"
+                                android:id="@+id/textView41"
+                                android:gravity="center"
+                                android:textColor="#000" />
+
+                            <ToggleButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/toggleButton211"
+                                android:textOff="مرد"
+                                android:textOn="زن"
+                                android:layout_margin="0dp"
+                                android:layout_gravity="right" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="15dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <RadioGroup
+                                android:id="@+id/radiogroup2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <RadioButton
+                                    android:tag="0"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="پیاده روی"
+                                    android:id="@+id/radioButton6"
+                                    android:checked="true" />
+
+                                <RadioButton
+                                    android:tag="1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="دویدن"
+                                    android:id="@+id/radioButton7" />
+
+                                <RadioButton
+                                    android:tag="2"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="دوچرخه سواری"
+                                    android:id="@+id/radioButton8" />
+
+                                <RadioButton
+                                    android:tag="3"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="شنا کردن"
+                                    android:id="@+id/radioButton9" />
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:textAppearance="?android:attr/textAppearanceLarge"
+                                android:text="فعالیت"
+                                android:id="@+id/textView18"
+                                android:layout_gravity="right"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textStyle="bold" />
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:text="محاسبه"
+                                android:id="@+id/button3"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:textStyle="bold" />
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:text=""
+                        android:id="@+id/textView19"
+                        android:gravity="center" />
+                </LinearLayout>
             </FrameLayout>
         </LinearLayout>
     </TabHost>

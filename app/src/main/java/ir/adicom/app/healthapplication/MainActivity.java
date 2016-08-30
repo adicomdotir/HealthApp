@@ -146,5 +146,59 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+        PAC();
+    }
+
+    EditText edtAgePac,edtWeiPac,edtHeiPac,edtTimePac;
+    RadioGroup radioGroupPac;
+    Button btnPac;
+    TextView txtResultPac;
+    int indexRadioGroup=0;
+
+    private void PAC() {
+        txtResultPac = (TextView) findViewById(R.id.textView19);
+        edtAgePac = (EditText) findViewById(R.id.editText31);
+        edtWeiPac = (EditText) findViewById(R.id.editText21);
+        edtHeiPac = (EditText) findViewById(R.id.editText11);
+        edtTimePac = (EditText) findViewById(R.id.editText4);
+        btnPac = (Button) findViewById(R.id.button3);
+        radioGroupPac = (RadioGroup) findViewById(R.id.radiogroup2);
+
+        radioGroupPac.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                RadioButton radio = (RadioButton) findViewById(radioGroup.getCheckedRadioButtonId());
+                indexRadioGroup = Integer.parseInt((String) radio.getTag());
+            }
+        });
+
+        btnPac.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int w = Integer.parseInt(edtWeiPac.getText().toString());
+                int t = Integer.parseInt(edtTimePac.getText().toString());
+                float res = 0;
+                switch (indexRadioGroup) {
+                    case 0:
+                        res = ((float) t/60)*((float) w/73)*438;
+                        // 438 - 73kg
+                        break;
+                    case 1:
+                        res = ((float) t/60)*((float) w/73)*986;
+                        // 986 - 73kg
+                        break;
+                    case 2:
+                        res = ((float) t/60)*((float) w/73)*292;
+                        // 292 - 73kg
+                        break;
+                    case 3:
+                        res = ((float) t/60)*((float) w/73)*511;
+                        // 511 - 73kg
+                        break;
+                }
+                txtResultPac.setText("کالری مصرفی : " + (int) res);
+            }
+        });
     }
 }

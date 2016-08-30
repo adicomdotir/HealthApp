@@ -11,4 +11,10 @@
     <string name="bmi_two">مابین 18.5-25 متعادل</string>
     <string name="bmi_three">مابین 25-30 اضافه وزن</string>
     <string name="bmi_four">بیشتر از 30 چاق</string>
+    <string-array name="array_exercise">
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
 </resources>
