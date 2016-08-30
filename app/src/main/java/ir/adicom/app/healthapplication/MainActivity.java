@@ -25,6 +25,10 @@ public class MainActivity extends AppCompatActivity {
     TextView txtResult;
     int tag = 0;
     float act[] = {1.2f, 1.375f,1.55f,1.725f, 1.9f};
+    // For BMI
+    EditText edtWeightBMI,edtHeightBMI;
+    Button btnBMI;
+    TextView txtResultBMI, txt1, txt2, txt3, txt4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,13 +89,61 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                boolean b = toggleButton.isChecked();
                 int age = Integer.parseInt(edtAge.getText().toString());
                 int weight = Integer.parseInt(edtWeight.getText().toString());
                 int height = Integer.parseInt(edtHeight.getText().toString());
-                int r = (int) (13.7516*weight + 5.0033*height - 6.7550*age + 66.4730);
+                int r;
+                if(b==false) {
+                    r = (int) (13.7516 * weight + 5.0033 * height - 6.7550 * age + 66.4730);
+                } else {
+                    r = (int) (9.5634 * weight + 1.8496 * height - 4.6756 * age + 655.0955);
+                }
                 txtResult.setText("کالری مصرفی روزانه شما : " + (int)(r*act[tag])
                         + "\n برای افزایش یک کیلو در هفته " + ((int)(r*act[tag])+1100)
                         + "\nبرای کاهش یک کیلو در هفته "  + ((int)(r*act[tag])-1100));
+            }
+        });
+
+        // Code for tab BMI
+        btnBMI = (Button) findViewById(R.id.button2);
+        edtHeightBMI = (EditText) findViewById(R.id.editText6);
+        edtWeightBMI = (EditText) findViewById(R.id.editText5);
+        txtResult = (TextView) findViewById(R.id.textView8);
+        txt1 = (TextView) findViewById(R.id.textView13);
+        txt2 = (TextView) findViewById(R.id.textView14);
+        txt3 = (TextView) findViewById(R.id.textView15);
+        txt4 = (TextView) findViewById(R.id.textView16);
+        btnBMI.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int w = Integer.parseInt(edtWeightBMI.getText().toString());
+                int h = Integer.parseInt(edtHeightBMI.getText().toString());
+                float bmi = (float) w/(float) (h*h);
+                bmi *= 10000;
+                txtResult.setText("شاخص : " + bmi + "\n" +
+                    "بهترین وزن : " + (h-102));
+                if (bmi<18.5) {
+                    txt1.setTextColor(getResources().getColor(R.color.green));
+                    txt2.setTextColor(Color.BLACK);
+                    txt3.setTextColor(Color.BLACK);
+                    txt4.setTextColor(Color.BLACK);
+                } else if(bmi>=18.5 && bmi<25) {
+                    txt2.setTextColor(getResources().getColor(R.color.green));
+                    txt1.setTextColor(Color.BLACK);
+                    txt3.setTextColor(Color.BLACK);
+                    txt4.setTextColor(Color.BLACK);
+                } else if(bmi>=25 && bmi<30) {
+                    txt3.setTextColor(getResources().getColor(R.color.green));
+                    txt2.setTextColor(Color.BLACK);
+                    txt1.setTextColor(Color.BLACK);
+                    txt4.setTextColor(Color.BLACK);
+                } else {
+                    txt4.setTextColor(getResources().getColor(R.color.green));
+                    txt2.setTextColor(Color.BLACK);
+                    txt3.setTextColor(Color.BLACK);
+                    txt1.setTextColor(Color.BLACK);
+                }
             }
         });
     }

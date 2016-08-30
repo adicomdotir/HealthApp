@@ -280,9 +280,202 @@
 
                 <LinearLayout
                     android:id="@+id/tab2"
+                    android:background="#fff"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical"></LinearLayout>
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#fff" >
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.7" >
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="وزن"
+                                    android:id="@+id/textView9"
+                                    android:layout_weight="0.5"
+                                    android:paddingLeft="20dp"
+                                    android:gravity="left"
+                                    android:textColor="#000" />
+
+                                <EditText
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:ems="10"
+                                    android:id="@+id/editText5"
+                                    android:layout_weight="0.5"
+                                    android:text="80"
+                                    android:gravity="center" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:orientation="horizontal"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:text="قد"
+                                    android:id="@+id/textView10"
+                                    android:layout_weight="0.5"
+                                    android:paddingLeft="20dp"
+                                    android:gravity="left"
+                                    android:textColor="#000" />
+
+                                <EditText
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:inputType="number"
+                                    android:ems="10"
+                                    android:id="@+id/editText6"
+                                    android:layout_weight="0.5"
+                                    android:text="180"
+                                    android:gravity="center" />
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.3"
+                            android:gravity="center" >
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="جنسیت"
+                                android:id="@+id/textView11"
+                                android:gravity="center"
+                                android:textColor="#000" />
+
+                            <ToggleButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/toggleButton"
+                                android:textOff="مرد"
+                                android:textOn="زن"
+                                android:layout_margin="0dp"
+                                android:layout_gravity="right" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:background="#FFF"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center|left">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="New Text"
+                                android:id="@+id/textView8"
+                                android:layout_marginLeft="20dp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.5"
+                            android:gravity="center">
+
+                            <Button
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="محاسبه"
+                                android:id="@+id/button2" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:background="#FFF"
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_horizontal"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="دسته بندی"
+                            android:id="@+id/textView12"
+                            android:layout_marginTop="20dp"
+                            android:gravity="center"
+                            android:textColor="#FFF"
+                            android:background="#000" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bmi_one"
+                            android:id="@+id/textView13"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:background="#90caff" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bmi_two"
+                            android:id="@+id/textView14"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:background="#feffbf" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bmi_three"
+                            android:id="@+id/textView15"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:background="#90caff" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/bmi_four"
+                            android:id="@+id/textView16"
+                            android:gravity="center"
+                            android:textColor="#000"
+                            android:background="#feffbf" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
 
                 <LinearLayout
                     android:id="@+id/tab3"

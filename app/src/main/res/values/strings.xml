@@ -7,4 +7,8 @@
         <item>        ورزش یا تمرینات سنگین ۶ الی ۷ روز در هفته</item>
         <item>        ورزش یا تمرینات خیلی سخت و یک شغل فیزیکی یا تمرینات سوپر</item>
     </string-array>
+    <string name="bmi_one">کمتر از 18.5 کمبود وزن</string>
+    <string name="bmi_two">مابین 18.5-25 متعادل</string>
+    <string name="bmi_three">مابین 25-30 اضافه وزن</string>
+    <string name="bmi_four">بیشتر از 30 چاق</string>
 </resources>
